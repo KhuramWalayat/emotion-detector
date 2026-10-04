@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Emotion Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='mywebscript.js') }}" defer></script>
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="/" aria-label="Emotion Detector home">
+            <span class="brand-mark" aria-hidden="true">e</span>
+            <span>Emotion Detector</span>
+        </a>
+        <span class="service-label">Powered by Watson NLP</span>
+    </header>
+    <main>
+        <section class="intro" aria-labelledby="page-title">
+            <p class="eyebrow">WORDS, WITH FEELING</p>
+            <h1 id="page-title">Understand the emotion<br>behind the words.</h1>
+            <p class="intro-copy">Explore five emotions in English text and discover which one<br class="desktop-break"> has the strongest signal.</p>
+            <ul class="emotion-list" aria-label="Emotions analyzed">
+                <li class="joy">Joy</li>
+                <li class="sadness">Sadness</li>
+                <li class="anger">Anger</li>
+                <li class="fear">Fear</li>
+                <li class="disgust">Disgust</li>
+            </ul>
+        </section>
+
+        <div class="workspace">
+            <section class="panel input-panel" aria-labelledby="input-heading">
+                <div class="panel-heading"><span class="step">01</span><h2 id="input-heading">Your words</h2></div>
+                <form id="emotionForm">
+                    <label for="textToAnalyze">Please enter the text to be analyzed</label>
+                    <textarea id="textToAnalyze" name="textToAnalyze" rows="6" placeholder="Try: I am glad this happened" aria-describedby="input-help"></textarea>
+                    <p class="helper" id="input-help">A sentence or a short paragraph works well.</p>
+                    <button id="analyseButton" type="submit">Analyze emotion <span aria-hidden="true">→</span></button>
+                </form>
+            </section>
+
+            <section class="panel result-panel" id="resultPanel" data-state="ready" aria-labelledby="result-heading">
+                <div class="panel-heading"><span class="step">02</span><h2 id="result-heading">Result of Emotion Detection</h2></div>
+                <span class="status" id="resultStatus">Ready to analyze</span>
+                <div id="system_response" role="status" aria-live="polite" aria-atomic="true">Enter your text and select Analyze emotion to see the scores and dominant emotion.</div>
+                <p class="result-note">Results reflect the model's interpretation of the text.</p>
+            </section>
+        </div>
+        <footer>Emotion Detector · AI-based web application</footer>
+    </main>
+</body>
+</html>

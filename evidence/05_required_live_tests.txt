@@ -1,0 +1,124 @@
+Captured: 2026-10-04T19:13:58.904394+00:00
+$ /workspace/scratch/ca7f41d71a1d/emotion-runtime/bin/python test_emotion_detection.py
+test_anger (__main__.TestEmotionDetection.test_anger)
+Recognize the expected anger statement. ... ERROR
+test_disgust (__main__.TestEmotionDetection.test_disgust)
+Recognize the expected disgust statement. ... ERROR
+test_fear (__main__.TestEmotionDetection.test_fear)
+Recognize the expected fear statement. ... ERROR
+test_joy (__main__.TestEmotionDetection.test_joy)
+Recognize the expected joy statement. ... ERROR
+test_sadness (__main__.TestEmotionDetection.test_sadness)
+Recognize the expected sadness statement. ... ERROR
+
+======================================================================
+ERROR: test_anger (__main__.TestEmotionDetection.test_anger)
+Recognize the expected anger statement.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ca7f41d71a1d/emotion-detector/EmotionDetection/emotion_detection.py", line 60, in emotion_detector
+    response.raise_for_status()
+  File "/workspace/scratch/ca7f41d71a1d/emotion-runtime/lib/python3.12/site-packages/requests/models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 502 Server Error: Bad Gateway for url: https://sn-watson-emotion.labs.skills.network/v1/watson.runtime.nlp.v1/NlpService/EmotionPredict
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspace/scratch/ca7f41d71a1d/emotion-detector/test_emotion_detection.py", line 20, in test_anger
+    emotion_detector("I am really mad about this")["dominant_emotion"], "anger"
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/ca7f41d71a1d/emotion-detector/EmotionDetection/emotion_detection.py", line 62, in emotion_detector
+    raise EmotionServiceError(f"Watson request failed: {error}") from error
+EmotionDetection.emotion_detection.EmotionServiceError: Watson request failed: 502 Server Error: Bad Gateway for url: https://sn-watson-emotion.labs.skills.network/v1/watson.runtime.nlp.v1/NlpService/EmotionPredict
+
+======================================================================
+ERROR: test_disgust (__main__.TestEmotionDetection.test_disgust)
+Recognize the expected disgust statement.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ca7f41d71a1d/emotion-detector/EmotionDetection/emotion_detection.py", line 60, in emotion_detector
+    response.raise_for_status()
+  File "/workspace/scratch/ca7f41d71a1d/emotion-runtime/lib/python3.12/site-packages/requests/models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 502 Server Error: Bad Gateway for url: https://sn-watson-emotion.labs.skills.network/v1/watson.runtime.nlp.v1/NlpService/EmotionPredict
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspace/scratch/ca7f41d71a1d/emotion-detector/test_emotion_detection.py", line 25, in test_disgust
+    result = emotion_detector("I feel disgusted just hearing about this")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/ca7f41d71a1d/emotion-detector/EmotionDetection/emotion_detection.py", line 62, in emotion_detector
+    raise EmotionServiceError(f"Watson request failed: {error}") from error
+EmotionDetection.emotion_detection.EmotionServiceError: Watson request failed: 502 Server Error: Bad Gateway for url: https://sn-watson-emotion.labs.skills.network/v1/watson.runtime.nlp.v1/NlpService/EmotionPredict
+
+======================================================================
+ERROR: test_fear (__main__.TestEmotionDetection.test_fear)
+Recognize the expected fear statement.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ca7f41d71a1d/emotion-detector/EmotionDetection/emotion_detection.py", line 60, in emotion_detector
+    response.raise_for_status()
+  File "/workspace/scratch/ca7f41d71a1d/emotion-runtime/lib/python3.12/site-packages/requests/models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 502 Server Error: Bad Gateway for url: https://sn-watson-emotion.labs.skills.network/v1/watson.runtime.nlp.v1/NlpService/EmotionPredict
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspace/scratch/ca7f41d71a1d/emotion-detector/test_emotion_detection.py", line 36, in test_fear
+    result = emotion_detector("I am really afraid that this will happen")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/ca7f41d71a1d/emotion-detector/EmotionDetection/emotion_detection.py", line 62, in emotion_detector
+    raise EmotionServiceError(f"Watson request failed: {error}") from error
+EmotionDetection.emotion_detection.EmotionServiceError: Watson request failed: 502 Server Error: Bad Gateway for url: https://sn-watson-emotion.labs.skills.network/v1/watson.runtime.nlp.v1/NlpService/EmotionPredict
+
+======================================================================
+ERROR: test_joy (__main__.TestEmotionDetection.test_joy)
+Recognize the expected joy statement.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ca7f41d71a1d/emotion-detector/EmotionDetection/emotion_detection.py", line 60, in emotion_detector
+    response.raise_for_status()
+  File "/workspace/scratch/ca7f41d71a1d/emotion-runtime/lib/python3.12/site-packages/requests/models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 502 Server Error: Bad Gateway for url: https://sn-watson-emotion.labs.skills.network/v1/watson.runtime.nlp.v1/NlpService/EmotionPredict
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspace/scratch/ca7f41d71a1d/emotion-detector/test_emotion_detection.py", line 14, in test_joy
+    emotion_detector("I am glad this happened")["dominant_emotion"], "joy"
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/ca7f41d71a1d/emotion-detector/EmotionDetection/emotion_detection.py", line 62, in emotion_detector
+    raise EmotionServiceError(f"Watson request failed: {error}") from error
+EmotionDetection.emotion_detection.EmotionServiceError: Watson request failed: 502 Server Error: Bad Gateway for url: https://sn-watson-emotion.labs.skills.network/v1/watson.runtime.nlp.v1/NlpService/EmotionPredict
+
+======================================================================
+ERROR: test_sadness (__main__.TestEmotionDetection.test_sadness)
+Recognize the expected sadness statement.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ca7f41d71a1d/emotion-detector/EmotionDetection/emotion_detection.py", line 60, in emotion_detector
+    response.raise_for_status()
+  File "/workspace/scratch/ca7f41d71a1d/emotion-runtime/lib/python3.12/site-packages/requests/models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 502 Server Error: Bad Gateway for url: https://sn-watson-emotion.labs.skills.network/v1/watson.runtime.nlp.v1/NlpService/EmotionPredict
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspace/scratch/ca7f41d71a1d/emotion-detector/test_emotion_detection.py", line 31, in test_sadness
+    emotion_detector("I am so sad about this")["dominant_emotion"], "sadness"
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/ca7f41d71a1d/emotion-detector/EmotionDetection/emotion_detection.py", line 62, in emotion_detector
+    raise EmotionServiceError(f"Watson request failed: {error}") from error
+EmotionDetection.emotion_detection.EmotionServiceError: Watson request failed: 502 Server Error: Bad Gateway for url: https://sn-watson-emotion.labs.skills.network/v1/watson.runtime.nlp.v1/NlpService/EmotionPredict
+
+----------------------------------------------------------------------
+Ran 5 tests in 25.307s
+
+FAILED (errors=5)
+
+Exit code: 1

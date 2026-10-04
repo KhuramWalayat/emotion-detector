@@ -1,0 +1,66 @@
+:root {
+    color-scheme: light;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #203a30;
+    background: #f8f8f2;
+    font-synthesis: none;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+.topbar {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 25px 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #dce3d9;
+}
+.brand { display: flex; align-items: center; gap: 11px; color: inherit; text-decoration: none; font-size: 17px; font-weight: 650; }
+.brand-mark { display: grid; place-items: center; width: 35px; height: 35px; border-radius: 11px; background: #254d3d; color: #fff; font-family: Georgia, serif; font-size: 29px; }
+.service-label { color: #69796e; font-size: 12px; }
+main { max-width: 1180px; margin: 0 auto; padding: 0 44px; }
+.intro { padding: 48px 0 32px; }
+.eyebrow { margin: 0 0 16px; color: #617b65; font-size: 11px; letter-spacing: 2px; font-weight: 700; }
+h1 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: clamp(32px, 4vw, 47px); line-height: 1.13; letter-spacing: -1px; }
+.intro-copy { color: #69766c; font-size: 15px; line-height: 1.6; margin: 19px 0 20px; }
+.emotion-list { display: flex; flex-wrap: wrap; gap: 9px; list-style: none; padding: 0; margin: 0; }
+.emotion-list li { border-radius: 20px; padding: 7px 16px; font-size: 12px; font-weight: 600; }
+.joy { background: #ece8c9; color: #716726; }
+.sadness { background: #dee7ed; color: #456478; }
+.anger { background: #f0dfd7; color: #99624b; }
+.fear { background: #e8e1ef; color: #746089; }
+.disgust { background: #e1e8d7; color: #5d7550; }
+.workspace { display: grid; grid-template-columns: 1.1fr 1fr; gap: 22px; }
+.panel { background: #fff; border: 1px solid #dfe5dc; border-radius: 16px; padding: 27px; min-height: 338px; }
+.panel-heading { display: flex; align-items: center; gap: 12px; margin-bottom: 23px; }
+.step { font-size: 11px; color: #7b8c7e; border: 1px solid #dbe3d7; border-radius: 50%; width: 28px; height: 28px; display: grid; place-items: center; flex-shrink: 0; }
+h2 { margin: 0; font-size: 17px; font-weight: 600; }
+label { display: block; font-size: 12px; color: #657469; margin-bottom: 10px; }
+textarea { width: 100%; min-height: 135px; resize: vertical; border: 1px solid #d7dfd3; border-radius: 8px; padding: 14px; background: #fcfcf9; font: inherit; font-size: 15px; line-height: 1.5; color: #203a30; }
+textarea::placeholder { color: #98a196; }
+textarea:focus { outline: 2px solid #75a88c; outline-offset: 2px; }
+.helper { font-size: 11px; color: #81907f; margin: 9px 0 18px; }
+button { display: flex; align-items: center; justify-content: space-between; gap: 28px; width: 100%; border: 0; border-radius: 8px; background: #254d3d; color: white; padding: 13px 16px; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; }
+button:hover { background: #183e2f; }
+button:disabled { opacity: 0.6; cursor: wait; }
+button:focus-visible { outline: 2px solid #75a88c; outline-offset: 3px; }
+.result-panel { display: flex; flex-direction: column; }
+.status { align-self: flex-start; padding: 6px 10px; border-radius: 5px; background: #eef2eb; color: #718269; font-size: 11px; margin-bottom: 22px; }
+#system_response { color: #6c7b6e; font-size: 15px; line-height: 1.8; overflow-wrap: anywhere; }
+.result-note { margin: auto 0 0; padding-top: 25px; color: #8a9689; font-size: 11px; }
+.result-panel[data-state="success"] .status { background: #e5f1e8; color: #2a7046; }
+.result-panel[data-state="success"] #system_response { color: #284c38; }
+.result-panel[data-state="error"] { border-color: #d7a99b; }
+.result-panel[data-state="error"] .status { background: #f9e8e2; color: #9e4d35; }
+.result-panel[data-state="error"] #system_response { color: #9e4d35; }
+footer { padding: 24px 0; color: #8a9585; font-size: 11px; }
+@media (max-width: 700px) {
+    .topbar { padding: 20px; }
+    main { padding: 0 20px; }
+    .service-label { font-size: 10px; max-width: 90px; text-align: right; }
+    .intro { padding-top: 34px; }
+    .desktop-break { display: none; }
+    .workspace { grid-template-columns: 1fr; }
+    .panel { padding: 22px; min-height: 300px; }
+}

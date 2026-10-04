@@ -1,0 +1,31 @@
+{
+  "captured_utc": "2026-10-04T19:17:28.594442+00:00",
+  "browser": "134.0.6998.35",
+  "backend": "Actual local Flask application; no mocked browser requests.",
+  "javascript_errors": [],
+  "checks": [
+    {
+      "check": "Deployed homepage",
+      "status": 200,
+      "screenshot": "6b_deployment_test.png",
+      "note": "Real Flask interface; text entered; no inference result claimed."
+    },
+    {
+      "check": "Blank input",
+      "status": 400,
+      "message": "Invalid text! Please try again!",
+      "screenshot": "7c_error_handling_interface.png"
+    },
+    {
+      "check": "Actual Watson outage handled",
+      "status": 503,
+      "message": "Emotion detection service is temporarily unavailable. Please try again.",
+      "screenshot": "6c_service_unavailable.png"
+    },
+    {
+      "check": "Mobile layout",
+      "width": 390,
+      "horizontal_overflow": false
+    }
+  ]
+}

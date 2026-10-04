@@ -1,0 +1,19 @@
+Captured: 2026-10-04T19:13:33.366463+00:00
+$ /workspace/scratch/ca7f41d71a1d/emotion-runtime/bin/python -c 'from EmotionDetection.emotion_detection import emotion_detector; print('"'"'Import: OK'"'"', flush=True); print(emotion_detector('"'"'I am glad this happened'"'"'))'
+Import: OK
+Traceback (most recent call last):
+  File "/workspace/scratch/ca7f41d71a1d/emotion-detector/EmotionDetection/emotion_detection.py", line 60, in emotion_detector
+    response.raise_for_status()
+  File "/workspace/scratch/ca7f41d71a1d/emotion-runtime/lib/python3.12/site-packages/requests/models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 502 Server Error: Bad Gateway for url: https://sn-watson-emotion.labs.skills.network/v1/watson.runtime.nlp.v1/NlpService/EmotionPredict
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/workspace/scratch/ca7f41d71a1d/emotion-detector/EmotionDetection/emotion_detection.py", line 62, in emotion_detector
+    raise EmotionServiceError(f"Watson request failed: {error}") from error
+EmotionDetection.emotion_detection.EmotionServiceError: Watson request failed: 502 Server Error: Bad Gateway for url: https://sn-watson-emotion.labs.skills.network/v1/watson.runtime.nlp.v1/NlpService/EmotionPredict
+
+Exit code: 1

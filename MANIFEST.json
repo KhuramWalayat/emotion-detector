@@ -1,0 +1,194 @@
+{
+  "project": "Emotion Detector",
+  "created_utc": "2026-10-04T19:20:39.328859+00:00",
+  "starter_repository": "https://github.com/ibm-developer-skills-network/oaqjp-final-project-emb-ai",
+  "verification": {
+    "isolated_tests_passed": 21,
+    "server_pylint_score": "10.00/10",
+    "required_live_tests": "Failed: 5 errors caused by HTTP 502",
+    "public_user_repository": "Pending GitHub account connection/publishing",
+    "browser": {
+      "captured_utc": "2026-10-04T19:17:28.594442+00:00",
+      "browser": "134.0.6998.35",
+      "backend": "Actual local Flask application; no mocked browser requests.",
+      "javascript_errors": [],
+      "checks": [
+        {
+          "check": "Deployed homepage",
+          "status": 200,
+          "screenshot": "6b_deployment_test.png",
+          "note": "Real Flask interface; text entered; no inference result claimed."
+        },
+        {
+          "check": "Blank input",
+          "status": 400,
+          "message": "Invalid text! Please try again!",
+          "screenshot": "7c_error_handling_interface.png"
+        },
+        {
+          "check": "Actual Watson outage handled",
+          "status": 503,
+          "message": "Emotion detection service is temporarily unavailable. Please try again.",
+          "screenshot": "6c_service_unavailable.png"
+        },
+        {
+          "check": "Mobile layout",
+          "width": 390,
+          "horizontal_overflow": false
+        }
+      ]
+    }
+  },
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 1799,
+      "sha256": "79b6f8054f8ef5e9e78c18174bf57caf29b11410166b9268d6923e87520eb88f"
+    },
+    {
+      "path": "EmotionDetection/__init__.py",
+      "bytes": 222,
+      "sha256": "d8d892abcb7451fbc16a4272768cbabbaa9ead232ba281cf1090e7ab5a53fbdb"
+    },
+    {
+      "path": "EmotionDetection/emotion_detection.py",
+      "bytes": 2383,
+      "sha256": "f7fd78a7c6d772af2e690e5abf4b4925b586393042ea027bf4392d9ae3efa8ce"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 11358,
+      "sha256": "2e517e547dff1eb4bae94bcc140a9662cc8214a67f09ce379e8ecc49d4f15b12"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4237,
+      "sha256": "019106e70c115079c2b01f785bfd3ad47a6a17cf0e30163f9f01fa9ccb4d42a1"
+    },
+    {
+      "path": "SUBMISSION_GUIDE.md",
+      "bytes": 12136,
+      "sha256": "1028b83e3426bd3bf312ed87b246cbbe4e60c2f40f80da37edead07d92daabe8"
+    },
+    {
+      "path": "collect_evidence.py",
+      "bytes": 2723,
+      "sha256": "7f42220bb0b50b12bf8a882486e217dc8d2481f2866f82c1b973912b8d0acaa7"
+    },
+    {
+      "path": "evidence/00_source_repository.txt",
+      "bytes": 270,
+      "sha256": "52a3c914769601e7a57c0dd5f75a7d611ca3744f5a50f600eac5e947f6f9372f"
+    },
+    {
+      "path": "evidence/00_watson_connection_probe.txt",
+      "bytes": 168,
+      "sha256": "8cacf93bda9e493eec1033f63c857c2461bf3896411f919adead57abf6688fb6"
+    },
+    {
+      "path": "evidence/01_environment.txt",
+      "bytes": 177,
+      "sha256": "506f70185fbfa2edbab22c275551fae7940fcf8421c590760530d9f9f1cdce0c"
+    },
+    {
+      "path": "evidence/02_03_live_detector.txt",
+      "bytes": 1409,
+      "sha256": "ee998690aaaa9ec6fb303e0b75583c6d4cbae8034946de5045bf5723e788c480"
+    },
+    {
+      "path": "evidence/04_package_validation.txt",
+      "bytes": 532,
+      "sha256": "8bf9a626fbbca6603634cc3e242a70bd2af09523c37a942802df7c72f8ddcb81"
+    },
+    {
+      "path": "evidence/05_isolated_unit_tests.txt",
+      "bytes": 2374,
+      "sha256": "0c04ed201698c9713cdcf7f223d5d8d0f81f45778d387431ad3a43d0f271ff8c"
+    },
+    {
+      "path": "evidence/05_required_live_tests.txt",
+      "bytes": 8575,
+      "sha256": "95b42f5705e252d73dee9b161d7eab925d6589ad5be92f5e5d4af1f2b5a8c463"
+    },
+    {
+      "path": "evidence/06_07_browser_checks.json",
+      "bytes": 897,
+      "sha256": "84d006938faaa2c11b3cfa8e41d3698aed83277b332eba223ec6a7e357e62759"
+    },
+    {
+      "path": "evidence/08_pylint_package.txt",
+      "bytes": 266,
+      "sha256": "8a6f33ac482c693b145a1ce6e5fa1a7258522eec93afa5186ee9abc46eb0bf89"
+    },
+    {
+      "path": "evidence/08_pylint_server.txt",
+      "bytes": 229,
+      "sha256": "00dd85a4553e15ee2de6a97ebbaa6b2c4f798c6c581cb6263304668b1898fe9f"
+    },
+    {
+      "path": "evidence/6b_deployment_test.png",
+      "bytes": 81590,
+      "sha256": "f4751eae85989af6ad2c704c34fdc163bff8989024e9f3438227925d08aeb7ff"
+    },
+    {
+      "path": "evidence/6c_service_unavailable.png",
+      "bytes": 79779,
+      "sha256": "b87039956b457cbd8a46b64b55d165c17c147a0d9908f1df8d9daec937d1c2b3"
+    },
+    {
+      "path": "evidence/7c_error_handling_interface.png",
+      "bytes": 75821,
+      "sha256": "d2e6240c2bdb82bd4de14e1cc0694768214efafa0dbc36872c7ca4045f5a219f"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "bytes": 35,
+      "sha256": "33f0062e10acde92d2f9ebf0e13c75aa419eb0059fa42dc69033154a2e828a35"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 32,
+      "sha256": "3771ca903aa26bcf4db21eb1de8d3646fe47a0ebd0c5e14cea6a40cc4831ee4d"
+    },
+    {
+      "path": "server.py",
+      "bytes": 1759,
+      "sha256": "d04e5adcefc31c2f4de0747eb2728073b09d6f19a9784ec2c7e224487cdecb03"
+    },
+    {
+      "path": "static/mywebscript.js",
+      "bytes": 1393,
+      "sha256": "5453175a7e61745bbd149b2d26b38c0dd8ac744bba08fbadad1ef3e60f3df682"
+    },
+    {
+      "path": "static/style.css",
+      "bytes": 4214,
+      "sha256": "23413fcaff99c46c361bf2426a7c3e354dcf3dedc03beeb0d91b565183a61271"
+    },
+    {
+      "path": "templates/index.html",
+      "bytes": 2892,
+      "sha256": "45abda792a31e5eb9fa2b505841a1a130d0feed77506e184e91102f0a938f363"
+    },
+    {
+      "path": "test_emotion_detection.py",
+      "bytes": 1391,
+      "sha256": "1e6612cc1c8678a9ae2a4ccf9ecedc295cf2c7dd01876d274733806b89782d81"
+    },
+    {
+      "path": "tests/__init__.py",
+      "bytes": 66,
+      "sha256": "46838e25b5e86e7bc6a6efff74bb171d9c6cce86ad63731394c1245c4ca4d4d5"
+    },
+    {
+      "path": "tests/test_client.py",
+      "bytes": 4440,
+      "sha256": "3a9af84e949ecc5267089290d082f05b9dcb14ca55b94e39451d332b148e3094"
+    },
+    {
+      "path": "tests/test_server.py",
+      "bytes": 3169,
+      "sha256": "3e3686e8460d87563517794317bb55c71fde4c51943b9c407fcc1ff407e3652a"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+Captured: 2026-10-04T19:13:22.681137+00:00
+$ /workspace/scratch/ca7f41d71a1d/emotion-runtime/bin/python -c 'from EmotionDetection import emotion_detection, emotion_detector; print('"'"'Package import: OK'"'"'); print('"'"'Module:'"'"', emotion_detection.__name__); print('"'"'Blank-input result:'"'"', emotion_detector('"'"''"'"'))'
+Package import: OK
+Module: EmotionDetection.emotion_detection
+Blank-input result: {'anger': None, 'disgust': None, 'fear': None, 'joy': None, 'sadness': None, 'dominant_emotion': None}
+
+Exit code: 0

@@ -1,0 +1,3 @@
+Starter repository: https://github.com/ibm-developer-skills-network/oaqjp-final-project-emb-ai.git
+Cloned starter commit: 3e04588b7b73640f1afb806d3e6bf3e2a41e8fd2
+The original Apache-2.0 license is preserved. This is the starter source, not a user-owned submission URL.

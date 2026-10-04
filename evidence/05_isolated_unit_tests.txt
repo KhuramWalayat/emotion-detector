@@ -1,0 +1,31 @@
+Captured: 2026-10-04T19:13:23.076570+00:00
+$ /workspace/scratch/ca7f41d71a1d/emotion-runtime/bin/python -m unittest discover -s tests -v
+test_blank_inputs_return_none_without_network (test_client.TestEmotionClient.test_blank_inputs_return_none_without_network) ... ok
+test_each_emotion_can_be_dominant (test_client.TestEmotionClient.test_each_emotion_can_be_dominant) ... ok
+test_format_and_dominant_emotion (test_client.TestEmotionClient.test_format_and_dominant_emotion) ... ok
+test_http_failure_is_reported (test_client.TestEmotionClient.test_http_failure_is_reported) ... ok
+test_invalid_json_is_reported (test_client.TestEmotionClient.test_invalid_json_is_reported) ... ok
+test_invalid_scores_are_reported (test_client.TestEmotionClient.test_invalid_scores_are_reported) ... ok
+test_missing_prediction_is_reported (test_client.TestEmotionClient.test_missing_prediction_is_reported) ... ok
+test_missing_score_is_reported (test_client.TestEmotionClient.test_missing_score_is_reported) ... ok
+test_request_contract (test_client.TestEmotionClient.test_request_contract) ... ok
+test_status_400_returns_none (test_client.TestEmotionClient.test_status_400_returns_none) ... ok
+test_tied_scores_are_deterministic (test_client.TestEmotionClient.test_tied_scores_are_deterministic) ... ok
+test_timeout_is_reported (test_client.TestEmotionClient.test_timeout_is_reported) ... ok
+test_empty_and_whitespace_inputs (test_server.TestEmotionServer.test_empty_and_whitespace_inputs) ... ok
+test_formatted_success_response (test_server.TestEmotionServer.test_formatted_success_response) ... ok
+test_homepage (test_server.TestEmotionServer.test_homepage) ... ok
+test_missing_parameter (test_server.TestEmotionServer.test_missing_parameter) ... ok
+test_post_is_not_supported (test_server.TestEmotionServer.test_post_is_not_supported) ... ok
+test_service_failure (test_server.TestEmotionServer.test_service_failure) ... [2026-10-04 20:13:22,997] WARNING in server: Emotion detection request failed: Service unavailable
+ok
+test_static_assets (test_server.TestEmotionServer.test_static_assets) ... ok
+test_url_encoded_input (test_server.TestEmotionServer.test_url_encoded_input) ... ok
+test_watson_rejected_input (test_server.TestEmotionServer.test_watson_rejected_input) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.069s
+
+OK
+
+Exit code: 0
