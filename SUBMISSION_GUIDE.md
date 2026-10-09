@@ -1,12 +1,12 @@
 # Emotion Detector submission guide
 
-This bundle contains the implementation, actual terminal logs and browser screenshots. Open a code file and copy its full contents into the corresponding code field. Paste successful terminal output only after the indicated check has actually passed.
+This repository contains the implementation, actual terminal logs and browser screenshots. Open a code file and copy its full contents into the corresponding code field. Paste successful terminal output only after the indicated check has actually passed.
 
-The 21 isolated fixture tests passed and `server.py` scored 10.00/10 in Pylint. The real Watson service returned HTTP 502, so the five required live tests did not pass. No public user-owned GitHub repository has been created. These two remaining requirements need a reachable lab service and your GitHub account.
+The 21 isolated fixture tests passed and `server.py` scored 10.00/10 in Pylint. The real Watson service returned HTTP 502, so the five required live tests did not pass. The code is now in a public GitHub repository, https://github.com/KhuramWalayat/emotion-detector. The remaining requirement, the five live tests, needs a reachable lab service.
 
 | Field | What to submit | File | Current status |
 |---|---|---|---|
-| 1 | Public README URL | `README.md` | Publish to your own public GitHub repository first. |
+| 1 | Public README URL | `README.md` | Published: https://github.com/KhuramWalayat/emotion-detector/blob/main/README.md |
 | 2.1 | Application function code | `EmotionDetection/emotion_detection.py` | Code ready; copy the full file below. |
 | 2.2 | Successful import and real test output | `evidence/02_03_live_detector.txt` | Import passed; real call failed with HTTP 502. Rerun in the lab. |
 | 3.1 | Correctly formatted detector code | `EmotionDetection/emotion_detection.py` | Code ready; includes all five scores and dominant_emotion. |

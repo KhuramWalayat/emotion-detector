@@ -83,7 +83,7 @@ It exits with an error if any check fails. Omit `--live` for local checks only.
 Package lint permits the course-required name `EmotionDetection` explicitly;
 `server.py` receives its score without that naming option or disabled warnings.
 
-## Evidence in this bundle
+## Verification evidence
 
 Local verification passed all 21 isolated tests. Pylint rated `server.py` at
 10.00/10. Package imports and blank-input validation also succeeded.
@@ -98,9 +98,10 @@ to use. The deployment screenshot shows the locally running interface; it must
 be retaken with a successful real analysis once Watson is reachable. The blank
 input screenshot validates genuine Flask error handling without a mock service.
 
-Create a public repository under your own GitHub account before supplying the
-README and `EmotionDetection/__init__.py` URLs. This bundle has not been
-published to a user-owned GitHub repository.
+The code is published in this public repository,
+https://github.com/KhuramWalayat/emotion-detector. A short demo of the tests,
+the lint check and the web interface is at
+https://www.youtube.com/watch?v=3AqkmBGbnpY.
 
 ## Files
 
